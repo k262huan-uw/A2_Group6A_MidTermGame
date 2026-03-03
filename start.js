@@ -3,7 +3,6 @@ const instrBtn = { x: 400, y: 520, w: 280, h: 86, label: "INSTRUCTIONS" };
 
 function drawStart() {
   drawMochiSky();
-  textFont(myFont);
   // Big title sign
   noStroke();
   fill(255, 255, 255, 230);
