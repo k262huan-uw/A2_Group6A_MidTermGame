@@ -39,8 +39,7 @@ const MOCHI = {
 // SCREEN DRAW
 // ----------------------
 function drawGame() {
-  // Background + layout
-  drawMochiBackground();
+  background("lavender");
 
   // HUD
   drawMochiHUD();
@@ -95,16 +94,6 @@ function drawMixPhaseMochi() {
   if (tLeft <= 0) serveDrink();
 }
 
-// ----------------------
-// MOCHI DRAW HELPERS
-// ----------------------
-function drawMochiBackground() {
-  background(MOCHI.sky[0], MOCHI.sky[1], MOCHI.sky[2]);
-
-  noStroke();
-  fill(MOCHI.hills[0], MOCHI.hills[1], MOCHI.hills[2]);
-}
-
 function drawMochiHUD() {
   const tLeft = max(0, mixEndsAt - millis());
   const secs = (tLeft / 1000).toFixed(1);
@@ -112,11 +101,11 @@ function drawMochiHUD() {
   noStroke();
   fill(255, 255, 255, 235);
   rectMode(CENTER);
-  rect(width / 2, 70, 720, 44, 22);
+  rect(width / 2, 70, 740, 44, 22);
 
   fill(MOCHI.inkDark[0], MOCHI.inkDark[1], MOCHI.inkDark[2]);
   textAlign(CENTER, CENTER);
-  textSize(14);
+  textSize(9.8);
   text(
     "Round " +
       round +
@@ -136,15 +125,15 @@ function drawMochiHUD() {
 function drawCustomerRow(showTrueOrder) {
   // row panel
   noStroke();
-  fill(255, 255, 255, 160);
+  fill(233, 246, 255);
   rectMode(CORNER);
   rect(30, 105, width - 60, 200, 22);
 
   // customers
-  const xs = [150, 300, 450, 600];
+  const xs = [185, 330, 460, 610];
   for (let i = 0; i < 4; i++) {
     const mood = i === 0 ? "active" : "waiting";
-    drawMochiMonster(xs[i], 260, 70, i, mood);
+    drawMochiMonster(xs[i], 240, 70, i, mood);
   }
 
   // order bubble
@@ -217,10 +206,10 @@ function drawOrderBubble(x, y, ord, showTrueOrder) {
   noStroke();
   fill(255, 255, 255, 235);
   rectMode(CORNER);
-  rect(x, y, 360, 100, 18);
+  rect(x, y, 360, 60, 30);
 
   // bubble tail
-  triangle(x + 80, y + 100, x + 114, y + 100, x + 96, y + 130);
+  triangle(x + 30, y + 60, x + 70, y + 60, x + 96, y + 120);
 
   const slots = [
     { label: "Base", item: ord.base, px: x + 18 },
@@ -234,14 +223,11 @@ function drawOrderBubble(x, y, ord, showTrueOrder) {
     // When previewing, show true colours. During mixing, show what player sees.
     if (!showTrueOrder) col = getShownColor(col);
 
-    drawIngredientIcon(slots[i].px, y + 18, col, slots[i].label);
+    drawIngredientIcon(slots[i].px, y, col, slots[i].label);
   }
 }
 
 function drawIngredientIcon(x, y, col, label) {
-  fill(255, 255, 255, 210);
-  rect(x, y, 100, 60, 14);
-
   fill(col[0], col[1], col[2]);
   ellipse(x + 26, y + 30, 30, 30);
 
@@ -272,6 +258,13 @@ function drawCounter() {
 }
 
 function drawCupMochi(cx, cy) {
+  // straw
+  stroke(MOCHI.outline[0], MOCHI.outline[1], MOCHI.outline[2]);
+  strokeWeight(10);
+  strokeCap(SQUARE);
+  line(width / 2, cy - 120, width / 2, cy + 68);
+  noStroke();
+
   stroke(MOCHI.outline[0], MOCHI.outline[1], MOCHI.outline[2]);
   strokeWeight(4);
   fill(255, 255, 255, 220);
@@ -305,12 +298,6 @@ function drawCupMochi(cx, cy) {
       ellipse(cx - 45 + i * 18, cy + 70 + (i % 2) * 6, 12, 12);
     }
   }
-
-  // straw
-  stroke(MOCHI.outline[0], MOCHI.outline[1], MOCHI.outline[2]);
-  strokeWeight(5);
-  line(cx + 35, cy - 100, cx + 60, cy - 55);
-  noStroke();
 }
 
 function drawIngredientBins() {
