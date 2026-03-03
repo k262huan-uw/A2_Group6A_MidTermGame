@@ -1,23 +1,23 @@
-const playBtn = { x: 400, y: 520, w: 280, h: 86, label: "START SHIFT" };
-const instrBtn = { x: 400, y: 625, w: 280, h: 86, label: "INSTRUCTIONS" };
+const playBtn = { x: 400, y: 420, w: 280, h: 86, label: "START SHIFT" };
+const instrBtn = { x: 400, y: 520, w: 280, h: 86, label: "INSTRUCTIONS" };
 
 function drawStart() {
   drawMochiSky();
-
+  textFont(myFont);
   // Big title sign
   noStroke();
   fill(255, 255, 255, 230);
   rectMode(CENTER);
-  rect(width / 2, 220, 640, 140, 26);
+  rect(width / 2, 180, 640, 140, 26);
 
   fill(40, 45, 60);
   textAlign(CENTER, CENTER);
   textSize(44);
-  text("BOBA BAR", width / 2, 200);
+  text("BOBA BAR", width / 2, 170);
 
   textSize(18);
   fill(70, 75, 90);
-  text("Mochi Monster Mayhem", width / 2, 250);
+  text("Mochi Monster Mayhem", width / 2, 210);
 
   // Buttons
   drawMenuButton(playBtn, true);
@@ -79,19 +79,19 @@ function drawMochiSky() {
 
   noStroke();
   fill(255, 210, 225);
-  ellipse(170, 180, 540, 340);
-  ellipse(560, 170, 620, 360);
+  ellipse(170, 180, 340, 340);
+  ellipse(560, 170, 550, 550);
 
   fill(255, 255, 255, 200);
-  ellipse(110, 92, 80, 36);
-  ellipse(145, 85, 95, 44);
-  ellipse(620, 90, 90, 40);
-  ellipse(660, 95, 70, 34);
+  ellipse(90, 92, 60, 60);
+  ellipse(145, 85, 95, 95);
+  ellipse(620, 90, 90, 90);
+  ellipse(660, 95, 50, 50);
 
   // Counter base strip
   fill(170, 230, 220);
   rectMode(CORNER);
-  rect(0, 690, width, 110);
+  rect(0, 710, width, 110);
 }
 
 function drawMonsterLineDecor() {
