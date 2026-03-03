@@ -9,7 +9,7 @@ function drawStart() {
   rectMode(CENTER);
   rect(width / 2, 180, 640, 140, 26);
 
-  fill("pink");
+  fill(40, 45, 60);
   textAlign(CENTER, CENTER);
   textSize(44);
   text("BOBA BAR", width / 2, 170);
