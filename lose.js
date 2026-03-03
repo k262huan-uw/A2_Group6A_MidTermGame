@@ -1,6 +1,5 @@
 function drawLose() {
-  drawMochiSky();
-
+  background("#ff9385");
   noStroke();
   fill(255, 255, 255, 235);
   rectMode(CENTER);
@@ -8,16 +7,16 @@ function drawLose() {
 
   fill(40, 45, 60);
   textAlign(CENTER, CENTER);
-  textSize(52);
+  textSize(45);
   text("MYSTERY BOBA", width / 2, 260);
 
   fill(70, 75, 90);
-  textSize(18);
-  text(endingText, width / 2, 390);
+  textSize(14.5);
+  text(endingText, width / 2, 380);
 
-  fill(70, 75, 90);
+  fill("red");
   textSize(14);
-  text("Click or press ENTER for next customer.", width / 2, 560);
+  text("Click or press ENTER for next customer.", width / 2, 480);
 }
 
 function loseMousePressed() {
