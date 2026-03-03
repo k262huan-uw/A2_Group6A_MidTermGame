@@ -60,20 +60,20 @@ function drawPreviewPhaseMochi() {
   fill(255, 255, 255, 235);
   noStroke();
   rectMode(CENTER);
-  rect(width / 2, 530, 620, 110, 22);
+  rect(width / 2, 545, 620, 200, 22);
 
   fill(MOCHI.inkDark[0], MOCHI.inkDark[1], MOCHI.inkDark[2]);
   textAlign(CENTER, CENTER);
-  textSize(20);
-  text("MEMORIZE THE ORDER!", width / 2, 520);
+  textSize(30);
+  text("MEMORIZE THE ORDER!", width / 2, 530);
 
   const tLeft = max(0, orderPreviewUntil - millis());
   fill("red");
-  textSize(14);
+  textSize(20);
   text(
     "Order disappears in " + (tLeft / 1000).toFixed(1) + "s",
     width / 2,
-    545,
+    570,
   );
 }
 
@@ -243,11 +243,11 @@ function drawCounter() {
   noStroke();
   fill(MOCHI.counterTop[0], MOCHI.counterTop[1], MOCHI.counterTop[2]);
   rectMode(CORNER);
-  rect(40, 320, width - 80, 160, 22);
+  rect(30, 320, width - 60, 160, 22);
 
   // counter front
   fill(MOCHI.counterFront[0], MOCHI.counterFront[1], MOCHI.counterFront[2]);
-  rect(40, 410, width - 80, 280, 22);
+  rect(30, 410, width - 60, 280, 22);
 
   // cup in the middle
   drawCupMochi(width / 2, 390);
@@ -306,7 +306,7 @@ function drawIngredientBins() {
 function drawBinColumn(title, list, x, y, slotKey) {
   fill(255, 255, 255, 220);
   rectMode(CORNER);
-  rect(x - 90, y - 50, 180, 220, 18);
+  rect(x - 90, y - 50, 180, 240, 18);
 
   fill(MOCHI.inkDark[0], MOCHI.inkDark[1], MOCHI.inkDark[2]);
   textAlign(CENTER, TOP);
