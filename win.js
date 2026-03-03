@@ -1,23 +1,22 @@
 function drawWin() {
-  drawMochiSky();
-
+  background(170, 230, 220);
   noStroke();
   fill(255, 255, 255, 235);
   rectMode(CENTER);
-  rect(width / 2, 360, 650, 420, 26);
+  rect(width / 2, height / 2, 650, 420, 26);
 
   fill(40, 45, 60);
   textAlign(CENTER, CENTER);
-  textSize(52);
-  text("ORDER SLAYED", width / 2, 260);
+  textSize(45);
+  text("ORDER SLAYED", width / 2, 280);
 
   fill(70, 75, 90);
   textSize(20);
-  text(endingText, width / 2, 380);
+  text(endingText, width / 2, height / 2 + 10);
 
-  fill(70, 75, 90);
+  fill("green");
   textSize(14);
-  text("Click or press ENTER for next customer.", width / 2, 560);
+  text("Click or press ENTER for next customer.", width / 2, 530);
 }
 
 function winMousePressed() {
