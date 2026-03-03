@@ -103,15 +103,6 @@ function drawMochiBackground() {
 
   noStroke();
   fill(MOCHI.hills[0], MOCHI.hills[1], MOCHI.hills[2]);
-  ellipse(160, 180, 520, 320);
-  ellipse(540, 170, 640, 380);
-
-  // clouds
-  fill(255, 255, 255, 200);
-  ellipse(120, 90, 70, 34);
-  ellipse(150, 85, 88, 40);
-  ellipse(610, 86, 80, 38);
-  ellipse(645, 90, 60, 30);
 }
 
 function drawMochiHUD() {
@@ -162,7 +153,7 @@ function drawCustomerRow(showTrueOrder) {
 
 function drawMochiMonster(x, y, size, idx, mood) {
   const bodies = [
-    [255, 170, 185],
+    [600, 170, 185],
     [185, 235, 170],
     [170, 210, 255],
     [240, 190, 255],
@@ -269,7 +260,7 @@ function drawCounter() {
 
   // counter front
   fill(MOCHI.counterFront[0], MOCHI.counterFront[1], MOCHI.counterFront[2]);
-  rect(40, 420, width - 80, 280, 22);
+  rect(40, 410, width - 80, 280, 22);
 
   // cup in the middle
   drawCupMochi(width / 2, 390);

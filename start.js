@@ -1,17 +1,24 @@
 const playBtn = { x: 400, y: 420, w: 280, h: 86, label: "START SHIFT" };
 const instrBtn = { x: 400, y: 520, w: 280, h: 86, label: "INSTRUCTIONS" };
 
+let titleFont;
+
+function preload() {
+  titleFont = loadFont("libraries/fonts/PressStart2P-Regular.ttf");
+}
+
 function drawStart() {
   drawMochiSky();
   // Big title sign
   noStroke();
-  fill(255, 255, 255, 230);
+  fill(255, 255, 255);
   rectMode(CENTER);
   rect(width / 2, 180, 640, 140, 26);
 
   fill(40, 45, 60);
   textAlign(CENTER, CENTER);
   textSize(44);
+  textFont(titleFont);
   text("BOBA BAR", width / 2, 170);
 
   textSize(18);
@@ -51,11 +58,11 @@ function drawMenuButton(btn, primary) {
 
   noStroke();
   if (primary) {
-    if (hover) fill(255, 205, 120, 240);
-    else fill(255, 205, 120, 200);
+    if (hover) fill(250, 190, 85);
+    else fill(255, 205, 120);
   } else {
-    if (hover) fill(255, 255, 255, 240);
-    else fill(255, 255, 255, 200);
+    if (hover) fill(247, 245, 242);
+    else fill(255, 255, 255);
   }
 
   rect(btn.x, btn.y, btn.w, btn.h, 22);
@@ -82,10 +89,13 @@ function drawMochiSky() {
   ellipse(560, 170, 550, 550);
 
   fill(255, 255, 255, 200);
-  ellipse(90, 92, 60, 60);
-  ellipse(145, 85, 95, 95);
-  ellipse(620, 90, 90, 90);
-  ellipse(660, 95, 50, 50);
+  ellipse(90, 78, 60, 60);
+  fill(255, 255, 255);
+  ellipse(120, 70, 35, 35);
+  fill(255, 255, 255, 200);
+  ellipse(700, 50, 90, 90);
+  fill(255, 255, 255);
+  ellipse(660, 75, 50, 50);
 
   // Counter base strip
   fill(170, 230, 220);
