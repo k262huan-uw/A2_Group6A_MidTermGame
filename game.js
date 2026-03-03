@@ -58,7 +58,7 @@ function drawPreviewPhaseMochi() {
   drawCustomerRow(true);
 
   // Center hint
-  fill(255, 255, 255, 235);
+  fill("pink");
   noStroke();
   rectMode(CENTER);
   rect(width / 2, 520, 620, 110, 22);
