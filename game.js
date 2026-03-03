@@ -311,7 +311,7 @@ function drawIngredientBins() {
 function drawBinColumn(title, list, x, y, slotKey) {
   fill(255, 255, 255, 220);
   rectMode(CORNER);
-  rect(x - 90, y - 46, 180, 220, 18);
+  rect(x - 90, y - 50, 180, 220, 18);
 
   fill(MOCHI.inkDark[0], MOCHI.inkDark[1], MOCHI.inkDark[2]);
   textAlign(CENTER, TOP);

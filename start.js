@@ -4,7 +4,7 @@ const instrBtn = { x: 400, y: 520, w: 280, h: 86, label: "INSTRUCTIONS" };
 let titleFont;
 
 function preload() {
-  titleFont = loadFont("libraries/fonts/PressStart2P-Regular.ttf");
+  titleFont = loadFont("assets/fonts/PressStart2P-Regular.ttf");
 }
 
 function drawStart() {
