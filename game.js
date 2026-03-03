@@ -131,7 +131,7 @@ function drawCustomerRow(showTrueOrder) {
   rect(30, 105, width - 60, 200, 22);
 
   // customers
-  const xs = [185, 330, 460, 610];
+  const xs = [190, 330, 470, 610];
   for (let i = 0; i < 4; i++) {
     const mood = i === 0 ? "active" : "waiting";
     drawMochiMonster(xs[i], 240, 70, i, mood);
@@ -251,11 +251,6 @@ function drawCounter() {
 
   // cup in the middle
   drawCupMochi(width / 2, 390);
-
-  fill(MOCHI.inkDark[0], MOCHI.inkDark[1], MOCHI.inkDark[2]);
-  textAlign(CENTER, TOP);
-  textSize(14);
-  text("Your Bubble Tea", width / 2, 486);
 }
 
 function drawCupMochi(cx, cy) {
@@ -284,19 +279,19 @@ function drawCupMochi(cx, cy) {
 
   noStroke();
   fill(baseC[0], baseC[1], baseC[2], 200);
-  rect(cx, cy + 45, 112, 48, 16);
+  rect(cx, cy + 48, 112, 60, 16);
 
   fill(syrupC[0], syrupC[1], syrupC[2], 190);
-  rect(cx, cy + 5, 112, 48, 16);
+  rect(cx, cy - 5, 112, 47, 16);
 
   fill(topC[0], topC[1], topC[2], 180);
-  rect(cx, cy - 35, 112, 40, 16);
+  rect(cx, cy - 48, 112, 40, 16);
 
   // pearls
   if (selection.topping && selection.topping.id === "boba") {
     fill(30, 30, 30, 120);
     for (let i = 0; i < 6; i++) {
-      ellipse(cx - 45 + i * 18, cy + 70 + (i % 2) * 6, 12, 12);
+      ellipse(cx - 45 + i * 18, cy + 62 + (i % 2) * 6, 12, 12);
     }
   }
 }

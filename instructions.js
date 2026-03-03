@@ -1,8 +1,7 @@
-const backBtn = { x: 400, y: 680, w: 260, h: 86, label: "BACK" };
+const backBtn = { x: 400, y: 710, w: 260, h: 86, label: "BACK" };
 
 function drawInstr() {
-  drawMochiSky();
-
+  background("lavender");
   noStroke();
   fill(255, 255, 255, 235);
   rectMode(CENTER);
@@ -11,10 +10,10 @@ function drawInstr() {
   fill(40, 45, 60);
   textAlign(CENTER, TOP);
   textSize(40);
-  text("HOW TO PLAY", width / 2, 150);
+  text("HOW TO PLAY", width / 2, 180);
 
   fill(70, 75, 90);
-  textSize(16);
+  textSize(13);
   textAlign(CENTER, TOP);
 
   text(
@@ -31,7 +30,7 @@ function drawInstr() {
       "• V = toggle vision\n" +
       "• R = restart (back to title)",
     width / 2,
-    240,
+    270,
   );
 
   // Button
@@ -43,18 +42,13 @@ function instrMousePressed() {
   if (isHover(backBtn)) currentScreen = "start";
 }
 
-function instrKeyPressed() {
-  if (keyCode === ESCAPE) currentScreen = "start";
-  if (key === "b" || key === "B") currentScreen = "start";
-}
-
 function drawInstrButton(btn) {
   rectMode(CENTER);
   const hover = isHover(btn);
 
   noStroke();
-  if (hover) fill(255, 205, 120, 240);
-  else fill(255, 205, 120, 200);
+  if (hover) fill(250, 190, 85);
+  else fill(255, 205, 120);
 
   rect(btn.x, btn.y, btn.w, btn.h, 22);
 
