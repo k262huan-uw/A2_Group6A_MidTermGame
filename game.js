@@ -57,22 +57,23 @@ function drawPreviewPhaseMochi() {
   drawCustomerRow(true);
 
   // Center hint
-  fill("255, 255, 255, 235");
+  fill(255, 255, 255, 235);
   noStroke();
   rectMode(CENTER);
-  rect(width / 2, 520, 620, 110, 22);
+  rect(width / 2, 530, 620, 110, 22);
 
   fill(MOCHI.inkDark[0], MOCHI.inkDark[1], MOCHI.inkDark[2]);
   textAlign(CENTER, CENTER);
   textSize(20);
-  text("MEMORIZE THE ORDER!", width / 2, 500);
+  text("MEMORIZE THE ORDER!", width / 2, 520);
 
   const tLeft = max(0, orderPreviewUntil - millis());
+  fill("red");
   textSize(14);
   text(
     "Order disappears in " + (tLeft / 1000).toFixed(1) + "s",
     width / 2,
-    540,
+    545,
   );
 }
 
