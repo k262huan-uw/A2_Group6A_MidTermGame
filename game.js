@@ -20,7 +20,7 @@ const TOPPINGS = [
   { id: "pud", label: "Pudding", c: [245, 215, 120] },
 ];
 
-const serveBtn = { x: 650, y: 735, w: 260, h: 86 };
+const serveBtn = { x: 640, y: 400, w: 260, h: 86 };
 
 // ----------------------
 // MOCHI STYLE COLOURS
@@ -306,34 +306,37 @@ function drawIngredientBins() {
 function drawBinColumn(title, list, x, y, slotKey) {
   fill(255, 255, 255, 220);
   rectMode(CORNER);
-  rect(x - 90, y - 50, 180, 240, 18);
+  rect(x - 20, y - 50, 190, 230, 18);
 
   fill(MOCHI.inkDark[0], MOCHI.inkDark[1], MOCHI.inkDark[2]);
   textAlign(CENTER, TOP);
   textSize(14);
-  text(title, x, y - 34);
+  text(title, x + 75, y - 34);
 
   for (let i = 0; i < list.length; i++) {
-    const card = { x: x, y: y + i * 55, w: 150, h: 44 };
+    const card = { x: x, y: y + i * 45, w: 150, h: 44 };
     const hover = isHover(card);
     const chosen = selection[slotKey] && selection[slotKey].id === list[i].id;
 
     list[i]._card = card;
 
-    rectMode(CENTER);
+    // drink selection
+    rectMode(CORNER);
     noStroke();
     if (chosen) fill(180, 220, 255, 230);
     else fill(255, 255, 255, hover ? 235 : 195);
-    rect(card.x, card.y, card.w, card.h, 14);
+    rect(card.x - 20, card.y - 18, card.w + 40, card.h);
 
+    // colours
     const shown = getShownColor(list[i].c);
     fill(shown[0], shown[1], shown[2]);
-    ellipse(card.x - 50, card.y, 22, 22);
+    ellipse(card.x, card.y + 5, 22, 22);
 
+    // text
     fill(MOCHI.inkDark[0], MOCHI.inkDark[1], MOCHI.inkDark[2]);
     textAlign(LEFT, CENTER);
     textSize(12);
-    text(list[i].label, card.x - 34, card.y);
+    text(list[i].label, card.x + 20, card.y + 5);
   }
 }
 
@@ -344,9 +347,9 @@ function drawServeButtonMochi() {
   rectMode(CENTER);
   noStroke();
 
-  if (!enabled) fill(255, 255, 255, 110);
-  else if (hover) fill(MOCHI.accent[0], MOCHI.accent[1], MOCHI.accent[2], 240);
-  else fill(MOCHI.accent[0], MOCHI.accent[1], MOCHI.accent[2], 205);
+  if (!enabled) fill("lightgrey");
+  else if (hover) fill(250, 190, 85);
+  else fill(255, 205, 120);
 
   rect(serveBtn.x, serveBtn.y, serveBtn.w, serveBtn.h, 22);
 
