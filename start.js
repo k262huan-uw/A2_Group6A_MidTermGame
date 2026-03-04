@@ -23,7 +23,7 @@ function drawStart() {
 
   textSize(18);
   fill(70, 75, 90);
-  text("Mochi Monster Mayhem", width / 2, 210);
+  text("Monster Mayhem", width / 2, 210);
 
   // Buttons
   drawMenuButton(playBtn, true);
