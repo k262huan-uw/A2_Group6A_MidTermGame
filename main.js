@@ -14,6 +14,13 @@ let selection = { base: null, syrup: null, topping: null };
 
 let visionMode = "CVD"; // NORMAL or CVD
 
+let monsterColours = [
+  [600, 170, 185],
+  [185, 235, 170],
+  [170, 210, 255],
+  [240, 190, 255],
+];
+
 function setup() {
   createCanvas(800, 800);
   textFont("sans-serif");

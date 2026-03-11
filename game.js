@@ -146,12 +146,7 @@ function drawCustomerRow(showTrueOrder) {
 }
 
 function drawMochiMonster(x, y, size, idx, mood) {
-  const bodies = [
-    [600, 170, 185],
-    [185, 235, 170],
-    [170, 210, 255],
-    [240, 190, 255],
-  ];
+  const body = monsterColours[idx];
 
   // shadow
   noStroke();
@@ -419,6 +414,10 @@ function startRound() {
   selection.syrup = null;
   selection.topping = null;
 
+  monsterColours = [];
+  for (let i = 0; i < 4; i++) {
+    monsterColours.push([random(150, 255), random(150, 255), random(150, 255)]);
+  }
   const previewMs = max(1200, 2500 - (round - 1) * 120);
   const mixMs = max(5000, 9000 - (round - 1) * 200);
 

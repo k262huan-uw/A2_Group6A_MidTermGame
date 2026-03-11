@@ -27,7 +27,6 @@ function drawInstr() {
       "• Choose 1 Tea Base, 1 Syrup, 1 Topping\n" +
       "• Click SERVE before time runs out\n\n" +
       "Keys:\n" +
-      "• V = toggle vision\n" +
       "• R = restart (back to title)",
     width / 2,
     270,
