@@ -1,6 +1,6 @@
-Boba Bar Monster Mayhem
+A2: Midterm Game - Boba Bar Monster Mayhem
 
-6A
+Group6A
 
 Description: Brief overview of your game’s concept, mechanics, and player
 experience
@@ -10,6 +10,15 @@ Iteration Notes
 
 a. Post-Playtest: Three changes made based on playtesting
 
+1. Fixed the vision feature, so it automatically starts in CVD mode
+2. Made it so the monsters change colours
+3. Removed unnecessary features
+
 b. Post-Showcase: Two planned improvements
 
-6. Assets: List and attribute all non-original assets with in-text citations
+1. As each round passes add more features
+
+- Straws, ice/sugar level
+- Not all orders have to have toppings/syrup
+
+2. Add sounds

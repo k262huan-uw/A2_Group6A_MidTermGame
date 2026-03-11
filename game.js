@@ -53,8 +53,10 @@ function drawGame() {
 }
 
 function drawPreviewPhaseMochi() {
+  visionMode = "NORMAL";
+
   // Customer row + bubble (shows order clearly)
-  drawCustomerRow(true);
+  drawCustomerRow(false);
 
   // Center hint
   fill(255, 255, 255, 235);
@@ -79,6 +81,8 @@ function drawPreviewPhaseMochi() {
 
 function drawMixPhaseMochi() {
   // Customer row (bubble still exists but now follows vision mode feel)
+  visionMode = "CVD";
+
   drawCustomerRow(false);
 
   // Counter
@@ -117,7 +121,7 @@ function drawMochiHUD() {
       "s" +
       "  •  Vision " +
       visionMode +
-      " (V)  •  R = Restart",
+      "  •  R = Restart",
     width / 2,
     70,
   );
@@ -148,7 +152,6 @@ function drawMochiMonster(x, y, size, idx, mood) {
     [170, 210, 255],
     [240, 190, 255],
   ];
-  const body = bodies[idx % bodies.length];
 
   // shadow
   noStroke();
@@ -376,10 +379,6 @@ function gameMousePressed() {
 }
 
 function gameKeyPressed() {
-  if (key === "v" || key === "V") {
-    visionMode = visionMode === "NORMAL" ? "CVD" : "NORMAL";
-  }
-
   if (key === "r" || key === "R") {
     currentScreen = "start";
   }

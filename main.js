@@ -12,7 +12,7 @@ let phase = "PREVIEW"; // PREVIEW or MIX
 
 let selection = { base: null, syrup: null, topping: null };
 
-let visionMode = "NORMAL"; // NORMAL or CVD
+let visionMode = "CVD"; // NORMAL or CVD
 
 function setup() {
   createCanvas(800, 800);
