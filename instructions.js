@@ -13,7 +13,7 @@ function drawInstr() {
   text("HOW TO PLAY", width / 2, 180);
 
   fill(70, 75, 90);
-  textSize(13);
+  textSize(10);
   textAlign(CENTER, TOP);
 
   text(
@@ -24,7 +24,7 @@ function drawInstr() {
       "3. Click SERVE before time runs out\n\n" +
       "Keys:\n" +
       "R = restart (back to title)\n" +
-      "V = turn on ",
+      "V = turn on Colour Vision Deficiency mode",
     width / 2,
     270,
   );

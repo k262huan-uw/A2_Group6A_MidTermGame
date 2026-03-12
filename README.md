@@ -2,10 +2,12 @@ A2: Midterm Game - Boba Bar Monster Mayhem
 
 Group6A
 
-Description: Brief overview of your game’s concept, mechanics, and player experience.
+Description:
 Our games concept is to help players understand colour vision deficiency by showing how colours may appear to someone with the disability. The player prepares orders by matching customer orders from selecting a base, syrup, and topping.
 
-After a short delay, the full ordering interface appears, displaying all available ingredients options to assemble the drink. The player can switch between two visual modes: Normal Vision (V Mode) and Colour Vision Deficiency Mode (CVD Mode).CVD mode intentionally alters the colour palettemakes it more challenging for the player to distinguish between colours and complete the order within the time limit. In a way, mimicking or simulating the experience of having colour vision deficiency. Being able to toggle between these modes allows the player to understand the nuances and
+After a short delay, the full ordering interface appears, displaying all available ingredients options to assemble the drink. The player can switch between two visual modes: Normal Vision (V Mode) and Colour Vision Deficiency Mode (CVD Mode).
+
+CVD mode intentionally alters the colour palette, making it more challenging to distinguish between colours and complete the order within the time limit. This simulates the experience of having a colour vision deficiency and adds an extra layer of difficulty. Allowing players to toggle between these two modes helps them notice the subtle differences in visual perception and understand how colour accessibility can affect gameplay.
 
 Setup and Interaction Instructions: How to run and play the game.
 As context you run a bubble tea counter for mochi monsters.
@@ -14,11 +16,11 @@ Customers appear with speech bubbles showing their drink order.
 Click on ingredient options (tea, syrup, topping) to assemble drink order.
 Click SERVE to deliver order to customer, correct orders within the time limit increase score.
 
-Mechanic 1:
-Player sees the order briefly in normal vision with vibrant colours.
+Mechanic 1: Order Preview
+Speech bubble appears above the customer showing the required drink colours. The player must memorize or reference this preview to assemble the correct drink.
 
 Mechanic 2:
-Order menu or ingredient options appear, switching the order colours to colour vision deficiency/CVD mode.
+Ordering interface with ingredient options appear.
 
 Mechanic 3:
 Player can click between ingredient options, trying to accurately match options with the order.
