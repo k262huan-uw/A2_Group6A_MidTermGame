@@ -23,8 +23,8 @@ function drawInstr() {
       "2. Choose 1 Tea Base, 1 Syrup, 1 Topping\n" +
       "3. Click SERVE before time runs out\n\n" +
       "Keys:\n" +
-      "R = restart (back to title)",
-    "V = turn on ",
+      "R = restart (back to title)\n" +
+      "V = turn on ",
     width / 2,
     270,
   );
