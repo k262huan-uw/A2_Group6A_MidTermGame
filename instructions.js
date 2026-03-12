@@ -13,7 +13,7 @@ function drawInstr() {
   text("HOW TO PLAY", width / 2, 180);
 
   fill(70, 75, 90);
-  textSize(10);
+  textSize(11.5);
   textAlign(CENTER, TOP);
 
   text(
