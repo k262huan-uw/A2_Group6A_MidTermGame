@@ -14,6 +14,7 @@ function drawInstr() {
 
   fill(70, 75, 90);
   textSize(11.5);
+  textLeading(28);
   textAlign(CENTER, TOP);
 
   text(
