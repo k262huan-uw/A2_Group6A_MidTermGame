@@ -26,10 +26,6 @@ function setup() {
   textFont("sans-serif");
 }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
-
 function draw() {
   if (currentScreen === "start") drawStart();
   else if (currentScreen === "instr") drawInstr();
