@@ -19,15 +19,12 @@ function drawInstr() {
   text(
     "You run a bubble tea counter for mochi monsters.\n\n" +
       "Mechanic 1: Memory\n" +
-      "• You see the order briefly, then it disappears.\n\n" +
-      "Mechanic 2: Mixing under Vision Mode\n" +
-      "• Press V to toggle NORMAL / CVD.\n" +
-      "• In CVD mode, some colours look more similar.\n\n" +
-      "How to make a drink:\n" +
-      "• Choose 1 Tea Base, 1 Syrup, 1 Topping\n" +
-      "• Click SERVE before time runs out\n\n" +
+      "1. Once the order appears briefly, memorize the colours.\n\n" +
+      "2. Choose 1 Tea Base, 1 Syrup, 1 Topping\n" +
+      "3. Click SERVE before time runs out\n\n" +
       "Keys:\n" +
-      "• R = restart (back to title)",
+      "R = restart (back to title)",
+    "V = turn on ",
     width / 2,
     270,
   );
