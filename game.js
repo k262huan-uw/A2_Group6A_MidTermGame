@@ -222,7 +222,7 @@ function drawOrderBubble(x, y, ord, showTrueOrder) {
     let col = slots[i].item.c;
 
     // When previewing, show true colours. During mixing, show what player sees.
-    if (!showTrueOrder) col = getShownColor(col);
+    if (showTrueOrder) col = getShownColor(col);
 
     drawIngredientIcon(slots[i].px, y, col, slots[i].label);
   }
